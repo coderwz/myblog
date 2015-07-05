@@ -56,6 +56,7 @@ hr.small {
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
+  font-size: 5px;
 }
 .navbar-custom .nav li a {
   text-transform: uppercase;
@@ -68,6 +69,14 @@ hr.small {
     background: transparent;
     border-bottom: 1px solid transparent;
   }
+
+  .navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 10px;
+  line-height: 20px;
+}
   .navbar-custom .navbar-brand {
     color: white;
     padding: 20px;

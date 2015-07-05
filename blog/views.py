@@ -12,3 +12,9 @@ def about(request):
 
 def post(request):
     return render(request, 'blog/post.html', {})
+
+def project(request):
+    return render(request, 'blog/project.html', {})
+
+def login(request):
+    return render(request, 'blog/signup.html', {})

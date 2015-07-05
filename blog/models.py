@@ -12,9 +12,10 @@ class Tag(models.Model):
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
+    preview = models.TextField()
     text = models.TextField()
     tags = models.ManyToManyField(Tag, blank = True, null = True)
-    created_date = models.DateTimeField(default=timezone.now)
+    created_date = models.DateTimeField(default=timezone.now())
     published_date = models.DateTimeField(blank = True, null = True)
 
     def publish(self):
@@ -23,10 +24,3 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-
-class Author(models.Model):
-    username = models.CharField(max_length = 200)
-    email = models.EmailField()
-
-    def __str__(self):
-        return self.username
